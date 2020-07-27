@@ -1,0 +1,56 @@
+[alias]
+  co = checkout
+  ci = commit
+  st = status -s -b
+  br = branch -a
+
+  # log with pretty format
+  hist = log --pretty=format:'%Cred%h %Cgreen%cd %C(yellow)%d% %C(bold blue)%an%Creset %a' --graph --date=short
+
+  # switch to branch or create new branch
+  go = "!f() { git checkout -b \"$1\" 2> /dev/null || git checkout \"$1\"; }; f"
+
+  # list aliases
+  aliases = config --get-regexp alias
+
+  # amend with last commit message
+  amend = commit --amend --reuse-message=HEAD
+
+  # remove branches that have been merged to master
+  dm = "!git branch --merged | grep -v '\\*' | xargs -n 1 git branch -d"
+
+[apply]
+  # detect whitespace errors
+  whitespace = fix
+
+[core]
+  excludefile = ~/.gitignore
+  # `git rebase` safer on macOS
+  # more info: <http://www.git-tower.com/blog/make-git-rebase-safe-on-osx/>
+  trustctime = false
+  
+  # speed up commands with untracked files
+  untrackedCache = true
+
+[color "branch"]
+	current = yellow reverse
+	local = yellow
+	remote = green
+
+[color "diff"]
+	meta = yellow bold
+	frag = magenta bold # line info
+	old = red # deletions
+	new = green # additions
+
+[color "status"]
+	added = yellow
+	changed = green
+	untracked = cyan
+
+[help]
+  # automatically correct and execute mistyped commands
+  autocorrect = 1
+
+[push]
+  default = simple

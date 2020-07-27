@@ -1,0 +1,10 @@
+# macOS
+.DS_Store
+
+# thumbnail cache files
+._*
+Thumbs.db
+
+# files in external disks
+.Spotlight-V100
+.Trashes
