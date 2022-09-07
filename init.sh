@@ -3,8 +3,9 @@
 function bootstrap() {
   rsync --exclude ".DS_Store" \
     --exclude "init.sh" \
+    --exclude ".git" \
     -avh --no-perms . ~;
-  source ~/.bash_profile;
+  source ~/.zshrc;
   echo 'Sourced ⚡️';
   echo ""; # spacing
   echo "Downloading Git completion";
