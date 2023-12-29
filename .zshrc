@@ -1,12 +1,7 @@
 export PATH=/usr/local/sbin:$PATH
 
-# Path to your oh-my-zsh installation.
-export ZSH="{$HOME}/.oh-my-zsh"
-
 fpath+=("$(brew --prefix)/share/zsh/site-functions")
 ZSH_THEME=""
-
-source $ZSH/oh-my-zsh.sh
 
 # Load shell dotfiles
 # ~/.path to extend `$PATH`
@@ -23,5 +18,3 @@ COMPLETION_WAITING_DOTS=true
 
 autoload -U promptinit; promptinit
 prompt pure
-
-plugins=(git)

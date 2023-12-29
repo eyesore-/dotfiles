@@ -23,6 +23,9 @@
   # detect whitespace errors
   whitespace = fix
 
+[init]
+  defaultBranch = main
+
 [core]
   excludefile = ~/.gitignore
   # `git rebase` safer on macOS

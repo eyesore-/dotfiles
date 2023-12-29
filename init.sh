@@ -3,8 +3,10 @@
 function bootstrap() {
   rsync --exclude ".DS_Store" \
     --exclude "init.sh" \
+    --exclude "brew.sh" \
     --exclude ".git" \
     -avh --no-perms . ~;
+  . "./brew.sh"
   source ~/.zshrc;
   echo 'Sourced ⚡️';
   echo ""; # spacing
