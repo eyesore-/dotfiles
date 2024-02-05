@@ -1,5 +1,8 @@
 export PATH=/usr/local/sbin:$PATH
 
+zstyle ':completion:*:*:git:*' script ~/.zsh/git-completion.bash
+fpath=(~/.zsh $fpath)
+
 fpath+=("$(brew --prefix)/share/zsh/site-functions")
 ZSH_THEME=""
 
@@ -17,4 +20,5 @@ alias refresh="source ~/.zshrc && echo 'Refreshed 🌧'"
 COMPLETION_WAITING_DOTS=true
 
 autoload -U promptinit; promptinit
+autoload -Uz compinit && compinit
 prompt pure

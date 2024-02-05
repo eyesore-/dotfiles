@@ -7,11 +7,14 @@ function bootstrap() {
     --exclude ".git" \
     -avh --no-perms . ~;
   . "./brew.sh"
+  echo "Setting up Git completion";
+  mkdir -p ~/.zsh
+  curl https://raw.githubusercontent.com/git/git/master/contrib/completion/git-completion.bash -o ~/.zsh/git-completion.bash
+  curl https://raw.githubusercontent.com/git/git/master/contrib/completion/git-completion.zsh -o ~/.zsh/_git
+  echo ""; # spacing
   source ~/.zshrc;
   echo 'Sourced ⚡️';
   echo ""; # spacing
-  echo "Downloading Git completion";
-  curl https://raw.githubusercontent.com/git/git/master/contrib/completion/git-completion.bash -o ~/.git-completion.bash
   echo "Set up Git globals";
   read -p "Git name: ";
   git config --global user.name $REPLY;
@@ -29,4 +32,4 @@ else
   fi;
 fi;
 
-unset bootstrap; 
+unset bootstrap;
