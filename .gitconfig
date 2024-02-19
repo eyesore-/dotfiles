@@ -4,6 +4,9 @@
   st = status -s -b
   br = branch -a
 
+  # TLDR; safe force - force with lease
+  fpush = push --force-with-lease
+
   # log with pretty format
   hist = log --pretty=format:'%Cred%h %Cgreen%cd %C(yellow)%d% %C(bold blue)%an%Creset %a' --graph --date=short
 
@@ -31,7 +34,7 @@
   # `git rebase` safer on macOS
   # more info: <http://www.git-tower.com/blog/make-git-rebase-safe-on-osx/>
   trustctime = false
-  
+
   # speed up commands with untracked files
   untrackedCache = true
 
@@ -57,3 +60,6 @@
 
 [push]
   default = simple
+[rerere]
+  enabled = true
+  autoUpdate = true
