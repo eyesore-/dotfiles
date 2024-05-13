@@ -9,6 +9,9 @@ brew upgrade
 # Install pure prompt
 brew install pure
 
+# Install language package manager
+brew install mise
+
 # Install more recent version of macOS tools
 brew install vim --with-override-system-vi
 brew install grep
@@ -30,4 +33,3 @@ sleep 1
 
 # Remove outdated versions from cellar
 brew cleanup
-
