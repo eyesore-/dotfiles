@@ -1,12 +1,13 @@
 # More intelligent up/down behavior
-"\e[A": history-search-backward
-"\e[B": history-search-forward
+autoload -U up-line-or-beginning-search
+autoload -U down-line-or-beginning-search
+zle -N up-line-or-beginning-search
+zle -N down-line-or-beginning-search
+bindkey "^[[A" up-line-or-beginning-search
+bindkey "^[[B" down-line-or-beginning-search
 
 # List all matches in case of multiple possibilities
 set show-all-if-ambiguous on
-
-# Tab autocomplete regardless of filename case
-set completion-ignore-case on
 
 # Add traling slash when autocompleting symlinks to directories
 set mark-symlinked-directories on
@@ -18,4 +19,3 @@ set visible-stats on
 set input-meta on
 set output-meta on
 set convert-meta off
-

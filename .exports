@@ -21,12 +21,6 @@ export LC_ALL='en_US.UTF-8';
 # Highlight section titles in manual pages.
 export LESS_TERMCAP_md="${yellow}";
 
-# variables for virtualenvwrapper
-export WORKON_HOME=~/envs
-export PROJECT_HOME=~/Projects
-export VIRTUALENVWRAPPER_PYTHON=/usr/local/bin/python3
-export VIRTUALENVWRAPPER_VIRTUALENV=/usr/local/bin/virtualenv
-
 # variables for Go
 export GOPATH="${HOME}/go"
 export GOROOT="$(brew --prefix golang)/libexec"

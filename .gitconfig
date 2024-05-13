@@ -10,9 +10,6 @@
   # log with pretty format
   hist = log --pretty=format:'%Cred%h %Cgreen%cd %C(yellow)%d% %C(bold blue)%an%Creset %a' --graph --date=short
 
-  # switch to branch or create new branch
-  go = "!f() { git checkout -b \"$1\" 2> /dev/null || git checkout \"$1\"; }; f"
-
   # list aliases
   aliases = config --get-regexp alias
 
@@ -59,7 +56,7 @@
   autocorrect = 1
 
 [push]
-  default = simple
+  default = current
 [rerere]
   enabled = true
   autoUpdate = true

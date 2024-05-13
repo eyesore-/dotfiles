@@ -161,11 +161,17 @@ defaults write com.apple.finder FXInfoPanesExpanded -dict \
 # Dock & Dashboard
 ##
 
-# Set the icon size of Dock items to 36 pixels
-defaults write com.apple.dock tilesize -int 36
+# Set the icon size of Dock items to 32 pixels
+defaults write com.apple.dock tilesize -int 32
 
 # Set maginification to 38 pixels
-defaults write com.apple.dock largesize -int 38
+defaults write com.apple.dock largesize -int 34
+
+# Set autohide on
+defaults write com.apple.dock autohide -bool true
+
+# Delay autoshow to 5 min
+defaults write com.apple.dock autohide-delay -float 1000
 
 # Minimize windows into their application’s icon
 defaults write com.apple.dock minimize-to-application -bool true
