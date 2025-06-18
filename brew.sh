@@ -6,9 +6,6 @@ brew update
 # Upgrade installed formulae
 brew upgrade
 
-# Install pure prompt
-brew install pure
-
 # Install language package manager
 brew install mise
 

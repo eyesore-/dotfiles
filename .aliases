@@ -11,9 +11,6 @@ alias mkdir="mkdir -v"
 alias f="open -a Finder ."
 alias refresh="source ~/.bash_profile && echo 'Refreshed 🌧'"
 
-# Display connected WiFi password
-alias wifi="networksetup -getairportnetwork en0 | awk '{ print \$NF }' | xargs security find-generic-password -wga"
-
 # Detect which `ls` flavor is in use
 if ls --color > /dev/null 2>&1; then # GNU `ls`
 	colorflag="--color"

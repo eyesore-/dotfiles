@@ -1,0 +1,22 @@
+title = " 👻 "
+theme = nord
+background-opacity = 0.95
+background-blur-radius = 5
+
+font-family = "Geist Mono NFM"
+
+window-padding-balance = true
+window-padding-x = 4
+
+# Window decoration
+# default: true
+window-decoration = true
+
+window-height = 25
+window-width = 90
+
+clipboard-read = allow
+clipboard-write = allow
+
+macos-titlebar-style = "tabs"
+macos-option-as-alt = true
